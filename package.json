@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "dev": "nodemon",
+        "codegen": "graphql-codegen",
         "database:setup": "docker-compose run --rm migration",
         "generate": "ts-node ./generator",
         "orm:generate": "prisma generate",
@@ -18,6 +19,10 @@
         "pino": "^8.7.0"
     },
     "devDependencies": {
+        "@graphql-codegen/cli": "^2.13.7",
+        "@graphql-codegen/graphql-modules-preset": "^2.5.4",
+        "@graphql-codegen/typescript": "^2.7.5",
+        "@graphql-codegen/typescript-resolvers": "^2.7.5",
         "@rimac-technology/eslint-config": "^30.0.0",
         "@types/node": "^18.11.3",
         "eslint": "^8.26.0",
