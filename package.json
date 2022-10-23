@@ -2,7 +2,7 @@
     "name": "schema-first-poc",
     "version": "1.0.0",
     "scripts": {
-        "dev": "ts-node ./src/server/server.ts",
+        "dev": "nodemon",
         "database:setup": "docker-compose run --rm migration",
         "generate": "ts-node ./generator",
         "orm:generate": "prisma generate",
@@ -22,6 +22,7 @@
         "@types/node": "^18.11.3",
         "eslint": "^8.26.0",
         "generate-template-files": "^3.2.1",
+        "nodemon": "^2.0.20",
         "pino-pretty": "^9.1.1",
         "prettier": "^2.7.1",
         "prettier-plugin-prisma": "^4.4.0",
