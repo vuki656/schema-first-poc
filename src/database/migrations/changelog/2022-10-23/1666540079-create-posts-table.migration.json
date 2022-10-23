@@ -1,0 +1,76 @@
+{
+    "databaseChangeLog": [
+        {
+            "logicalFilePath": "1666540079-create-posts-table.migration.json",
+            "objectQuotingStrategy": "QUOTE_ALL_OBJECTS"
+        },
+        {
+            "changeSet": {
+                "id": "1666540079",
+                "author": "domagoj.vukovic2@rimac-technology.com",
+                "comment": "Create posts table",
+                "changes": [
+                    {
+                        "createTable": {
+                            "schemaName": "schema_first_poc",
+                            "tableName": "posts",
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "type": "uuid",
+                                        "defaultValueComputed": "public.uuid_generate_v4()",
+                                        "constraints": {
+                                            "nullable": false,
+                                            "primaryKey": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "date",
+                                        "type": "clob",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "content",
+                                        "type": "clob",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "user_fk",
+                                        "type": "uuid",
+                                        "constraints": {
+                                            "foreignKeyName": "FK_users__posts",
+                                            "nullable": false,
+                                            "referencedTableName": "users",
+                                            "referencedColumnNames": "id"
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "created_at",
+                                        "type": "datetime",
+                                        "defaultValueComputed": "timezone('utc', NOW())",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

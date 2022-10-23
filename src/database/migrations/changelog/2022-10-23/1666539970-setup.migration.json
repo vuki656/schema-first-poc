@@ -1,0 +1,32 @@
+{
+    "databaseChangeLog": [
+        {
+            "logicalFilePath": "1666539970-setup.migration.json",
+            "objectQuotingStrategy": "QUOTE_ALL_OBJECTS"
+        },
+        {
+            "changeSet": {
+                "id": "1666539970",
+                "author": "domagoj.vukovic2@rimac-technology.com",
+                "comment": "Setup",
+                "changes": [
+                    {
+                        "changes": [
+                            {
+                                "sql": {
+                                    "sql": "CREATE SCHEMA schema_first_poc"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "sql": {
+                            "comment": "Enable use of native UUIDs",
+                            "sql": "CREATE EXTENSION \"uuid-ossp\" SCHEMA public"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

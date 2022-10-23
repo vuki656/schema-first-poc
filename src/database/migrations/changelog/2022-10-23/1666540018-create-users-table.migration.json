@@ -1,0 +1,73 @@
+{
+    "databaseChangeLog": [
+        {
+            "logicalFilePath": "1666540018-create-users-table.migration.json",
+            "objectQuotingStrategy": "QUOTE_ALL_OBJECTS"
+        },
+        {
+            "changeSet": {
+                "id": "1666540018",
+                "author": "domagoj.vukovic2@rimac-technology.com",
+                "comment": "Create users table",
+                "changes": [
+                    {
+                        "createTable": {
+                            "schemaName": "schema_first_poc",
+                            "tableName": "users",
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "type": "uuid",
+                                        "defaultValueComputed": "public.uuid_generate_v4()",
+                                        "constraints": {
+                                            "nullable": false,
+                                            "primaryKey": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "first_name",
+                                        "type": "clob",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "last_name",
+                                        "type": "clob",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "email",
+                                        "type": "clob",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "created_at",
+                                        "type": "datetime",
+                                        "defaultValueComputed": "timezone('utc', NOW())",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

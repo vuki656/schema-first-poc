@@ -1,0 +1,18 @@
+{
+    "databaseChangeLog": [
+        {
+            "logicalFilePath": "__timestamp__-__description__KebabCase__.migration.json",
+            "objectQuotingStrategy": "QUOTE_ALL_OBJECTS"
+        },
+        {
+            "changeSet": {
+                "id": "__timestamp__",
+                "author": "__author__@rimac-technology.com",
+                "comment": "__description__",
+                "changes": [
+                    // TODO: fill
+                ]
+            }
+        }
+    ]
+}
