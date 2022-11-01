@@ -11,3 +11,6 @@ node_modules
 
 # Typescript Generated Files
 *generated.ts
+
+# Eslint
+.eslintcache

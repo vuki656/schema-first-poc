@@ -7,7 +7,8 @@
         "database:setup": "docker-compose run --rm migration",
         "generate": "ts-node ./generator",
         "orm:generate": "prisma generate",
-        "orm:sync": "prisma db pull && prettier --write './src/database/schema.prisma'"
+        "orm:sync": "prisma db pull && prettier --write './src/database/schema.prisma'",
+        "lint": "eslint './src/**/*.ts' --quiet --cache --cache-strategy content --cache-location './.eslintcache/'"
     },
     "dependencies": {
         "@apollo/server": "^4.0.2",

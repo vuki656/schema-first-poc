@@ -12,10 +12,10 @@ const server = new ApolloServer({
 
 void startStandaloneServer(
     server, {
-    listen: {
-        port: env.APP_PORT,
-    },
-})
+        listen: {
+            port: env.APP_PORT,
+        },
+    })
     .then(() => {
         logger.info({
             category: LoggerCategoriesEnum.SERVER,

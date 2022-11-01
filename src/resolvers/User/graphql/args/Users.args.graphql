@@ -1,8 +1,4 @@
-enum UsersSortArgs {
-    asc,
-    desc
-}
-
 type UsersArgs {
-    sort: UsersSortArgs!
+    skip: Int!
+    take: Int!
 }
