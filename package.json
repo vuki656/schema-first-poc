@@ -24,6 +24,7 @@
         "@graphql-codegen/graphql-modules-preset": "^2.5.5",
         "@graphql-codegen/typescript": "^2.7.5",
         "@graphql-codegen/typescript-resolvers": "^2.7.5",
+        "@graphql-tools/load-files": "^6.6.1",
         "@rimac-technology/eslint-config": "^30.0.0",
         "@types/node": "^18.11.3",
         "eslint": "^8.26.0",

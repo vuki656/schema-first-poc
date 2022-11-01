@@ -1,4 +1,4 @@
-type UsersArgs {
+input UsersArgs {
     skip: Int!
     take: Int!
 }

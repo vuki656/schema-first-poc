@@ -1249,6 +1249,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@graphql-tools/load-files@npm:^6.6.1":
+  version: 6.6.1
+  resolution: "@graphql-tools/load-files@npm:6.6.1"
+  dependencies:
+    globby: 11.1.0
+    tslib: ^2.4.0
+    unixify: 1.0.0
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 35d6e8f4d4260a6e4eab7070b49e4876f50e5d88ec5fa88e9903acc08a03a6d91572abd1845869a7d122fcbde08ee8107f6f452de24dc42a86087956893b9ef5
+  languageName: node
+  linkType: hard
+
 "@graphql-tools/load@npm:^7.5.5, @graphql-tools/load@npm:^7.7.1":
   version: 7.8.0
   resolution: "@graphql-tools/load@npm:7.8.0"
@@ -4494,7 +4507,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^11.0.3, globby@npm:^11.1.0":
+"globby@npm:11.1.0, globby@npm:^11.0.3, globby@npm:^11.1.0":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
   dependencies:
@@ -7048,6 +7061,7 @@ __metadata:
     "@graphql-codegen/graphql-modules-preset": ^2.5.5
     "@graphql-codegen/typescript": ^2.7.5
     "@graphql-codegen/typescript-resolvers": ^2.7.5
+    "@graphql-tools/load-files": ^6.6.1
     "@prisma/client": ^4.5.0
     "@rimac-technology/eslint-config": ^30.0.0
     "@types/node": ^18.11.3
@@ -7878,7 +7892,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unixify@npm:^1.0.0":
+"unixify@npm:1.0.0, unixify@npm:^1.0.0":
   version: 1.0.0
   resolution: "unixify@npm:1.0.0"
   dependencies:

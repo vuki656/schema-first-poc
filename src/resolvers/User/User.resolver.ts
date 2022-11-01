@@ -2,7 +2,7 @@ import orm from '../../shared/orm'
 
 import type { UserModule } from './generated'
 
-export const resolvers: UserModule.Resolvers = {
+export const userResolver: UserModule.Resolvers = {
     Mutation: {
         createUser: (_, variables) => {
             return orm.user.create({
