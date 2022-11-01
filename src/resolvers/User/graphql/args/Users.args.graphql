@@ -1,0 +1,8 @@
+enum UsersSortArgs {
+    asc,
+    desc
+}
+
+type UsersArgs {
+    sort: UsersSortArgs!
+}
