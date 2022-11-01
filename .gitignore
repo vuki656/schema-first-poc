@@ -10,4 +10,4 @@
 node_modules
 
 # Typescript Generated Files
-*graphql.generated.ts
+*generated.ts
