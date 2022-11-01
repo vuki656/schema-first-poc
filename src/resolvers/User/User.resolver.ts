@@ -1,10 +1,8 @@
-import type { Resolvers } from '../../generated-types/graphql'
+import type { UserModule } from './generated'
 
-export const resolvers: Resolvers = {
+export const resolvers: UserModule.Resolvers = {
     Mutation: {
-        createUser(a, b, c) {
-            b.input.firstName
-
+        createUser(parent, context, input) {
             return {
                 email: '1',
                 firstName: '1',
