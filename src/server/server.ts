@@ -6,10 +6,11 @@ import { LoggerCategoriesEnum } from '../shared/enums'
 import env from '../shared/env'
 import { logger } from '../shared/logger'
 import orm from '../shared/orm'
+import { CustomContextType } from '../shared/types/CustomContext.type'
 
 import { typeDefs } from './typeDefs'
 
-const server = new ApolloServer({
+const server = new ApolloServer<CustomContextType>({
     // @ts-expect-error // TODO: how to type this
     resolvers: [userResolver],
     typeDefs,
@@ -17,6 +18,12 @@ const server = new ApolloServer({
 
 void startStandaloneServer(
     server, {
+        context: async () => {
+            return {
+                id: '11',
+                name: 'hello',
+            }
+        },
         listen: {
             port: env.APP_PORT,
         },
