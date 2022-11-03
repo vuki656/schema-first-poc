@@ -1,10 +1,10 @@
 import orm from '../../shared/orm'
 
-import type { UserModule } from './graphql.generated'
+import { UserModule } from './resolver-types.generated'
 
 export const userResolver: UserModule.Resolvers = {
     Mutation: {
-        createUser: (_, variables, context) => {
+        createUser: (_, variables) => {
             return orm.user.create({
                 data: {
                     email: variables.input.email,

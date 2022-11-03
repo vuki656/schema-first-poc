@@ -10,12 +10,12 @@ const config: CodegenConfig = {
             preset: 'graphql-modules',
             config: {
                 useIndexSignature: true,
-                contextType: './CustomContext.type#CustomContextType'
+                contextType: '../shared/types/CustomContext.type#CustomContextType'
             },
             presetConfig: {
                 useGraphQLModules: false,
-                baseTypesPath: '../shared/types/graphql.generated.ts',
-                filename: 'graphql.generated.ts',
+                baseTypesPath: 'graphql-types.generated.ts',
+                filename: 'resolver-types.generated.ts',
             },
         },
     },
